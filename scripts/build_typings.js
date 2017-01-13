@@ -171,14 +171,14 @@ function getTypeScriptLocaleModuleDefinition (moduleSuffix, locale) {
 }
 
 function generateTypeScriptTypings (fns, aliases, locales) {
+  const aliasDefinitions = aliases
+    .map(getTypeScriptTypeAlias)
+
   const moduleDefinitions = [getTypeScriptDateFnsModuleDefinition(fns)]
     .concat(fns.map(getTypeScriptFnModuleDefinition.bind(null, '')))
     .concat(fns.map(getTypeScriptFnModuleDefinition.bind(null, '/index')))
     .concat(fns.map(getTypeScriptFnModuleDefinition.bind(null, '/index.js')))
     .map(module => module.definition)
-
-  const aliasDefinitions = aliases
-    .map(getTypeAlias)
 
   const localeModuleDefinitions = []
     .concat(locales.map(getTypeScriptLocaleModuleDefinition.bind(null, '')))

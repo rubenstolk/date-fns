@@ -11,6 +11,7 @@ for pattern in CHANGELOG.md \
   index.js \
   package.json \
   typings.d.ts \
+  fp \
   src/*
 do
   cp -r "$pattern" "$dir"
