@@ -93,7 +93,7 @@ import units from './_lib/units/index.js'
  *
  * @example
  * // Parse 28th of February in English locale in the context of 2010 year:
- * var eoLocale = require('date-fns/locale/eo')
+ * import eoLocale from 'date-fns/locale/eo'
  * var result = parse(
  *   '28-a de februaro',
  *   'Do [de] MMMM',
@@ -102,7 +102,7 @@ import units from './_lib/units/index.js'
  * )
  * //=> Sun Feb 28 2010 00:00:00
  */
-function parse (dateString, formatString, dirtyBaseDate, options) {
+export default function parse (dateString, formatString, dirtyBaseDate, options) {
   if (formatString === '') {
     return ''
   }
@@ -175,5 +175,3 @@ function parse (dateString, formatString, dirtyBaseDate, options) {
 
   return date
 }
-
-export default parse

@@ -1,4 +1,4 @@
-var toDate = require('../to_date/index.js')
+import toDate from '../to_date/index.js'
 
 var MILLISECONDS_IN_DAY = 24 * 60 * 60 * 1000
 
@@ -31,7 +31,7 @@ var MILLISECONDS_IN_DAY = 24 * 60 * 60 * 1000
  * )
  * //=> 0
  */
-function getOverlappingDaysInRanges (dirtyRangeLeft, dirtyRangeRight, options) {
+export default function getOverlappingDaysInRanges (dirtyRangeLeft, dirtyRangeRight, options) {
   var leftStartTime = toDate(dirtyRangeLeft.start, options).getTime()
   var leftEndTime = toDate(dirtyRangeLeft.end, options).getTime()
   var rightStartTime = toDate(dirtyRangeRight.start, options).getTime()
@@ -59,5 +59,3 @@ function getOverlappingDaysInRanges (dirtyRangeLeft, dirtyRangeRight, options) {
 
   return Math.ceil(differenceInMs / MILLISECONDS_IN_DAY)
 }
-
-module.exports = getOverlappingDaysInRanges
