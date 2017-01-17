@@ -1,3 +1,5 @@
+// This file is generated automatically by `scripts/build_index.js`. Please, don't change it.
+
 module.exports = {
   addDays: require('./add_days/index.js'),
   addHours: require('./add_hours/index.js'),

@@ -1,15 +1,15 @@
 import path from 'path'
 import fs from 'fs'
 
-export default function listFiles () {
-  const files = fs.readdirSync(path.join(process.cwd(), 'src'))
+export default function listFpFiles () {
+  const files = fs.readdirSync(path.join(process.cwd(), 'src/fp'))
   return files
-    .filter((file) => /^[^._]/.test(file) && file !== 'locale' && file !== 'fp' && file !== 'index.js')
+    .filter((file) => /^[^._]/.test(file) && file !== 'index.js')
     .map((file) => ({
       name: camelize(file),
       snakeCaseName: file,
-      path: `./${file}`,
-      fullPath: `./src/${file}/index.js`
+      path: `./fp/${file}`,
+      fullPath: `./src/fp/${file}/index.js`
     }))
 }
 

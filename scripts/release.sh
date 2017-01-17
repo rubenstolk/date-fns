@@ -9,11 +9,11 @@ fi
 echo $1 > VERSION
 
 yarn run sync-versions
-yarn run build-index
 yarn run build-umd
 yarn run build-docs
 yarn run build-fp
 yarn run build-typings
+yarn run build-index
 
 git add .
 git commit -m "Prepare release v$1"
