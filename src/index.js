@@ -133,5 +133,6 @@ module.exports = {
   subQuarters: require('./sub_quarters/index.js'),
   subSeconds: require('./sub_seconds/index.js'),
   subWeeks: require('./sub_weeks/index.js'),
-  subYears: require('./sub_years/index.js')
+  subYears: require('./sub_years/index.js'),
+  toDate: require('./to_date/index.js')
 }
