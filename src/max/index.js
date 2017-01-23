@@ -8,6 +8,7 @@ var toDate = require('../to_date/index.js')
  * Return the latest of the given dates.
  *
  * @param {Date[]|String[]|Number[]} datesArray - the dates to compare
+ * @param {Options} [options] - the object with options. See [Options]{@link docs/Options}
  * @returns {Date} the latest of the dates
  *
  * @example
