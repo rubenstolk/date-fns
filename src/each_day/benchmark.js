@@ -2,7 +2,7 @@
 /* eslint-env mocha */
 /* global suite, benchmark */
 
-var eachDay = require('./')
+import eachDay from './'
 
 suite('eachDay', function () {
   benchmark('date-fns', function () {
